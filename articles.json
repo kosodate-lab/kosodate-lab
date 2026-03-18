@@ -174,5 +174,37 @@
     "emoji": "🏫",
     "date": "2024.03.18",
     "featured": false
+  },
+  {
+    "id": "kdi-suitable-kids",
+    "title": "どんな子がKDI向きか",
+    "category": "column",
+    "emoji": "🎯",
+    "date": "2024.03.22",
+    "featured": false
+  },
+  {
+    "id": "kdi-weak-point",
+    "title": "KDIを卒園して気づくKDIの欠点",
+    "category": "column",
+    "emoji": "🍚",
+    "date": "2024.04.04",
+    "featured": false
+  },
+  {
+    "id": "kdi-english-school",
+    "title": "結局KDI卒園後は英語教室に通うという話",
+    "category": "column",
+    "emoji": "🏫",
+    "date": "2024.04.21",
+    "featured": false
+  },
+  {
+    "id": "kdi-1month",
+    "title": "KDI卒園から1ヵ月",
+    "category": "column",
+    "emoji": "📅",
+    "date": "2024.05.02",
+    "featured": false
   }
 ]
