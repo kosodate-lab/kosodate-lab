@@ -207,6 +207,52 @@ body {
 .nav-item:hover { color: var(--accent); }
 .nav-item svg { width: 22px; height: 22px; }
 
+/* ── Search overlay ── */
+.search-overlay {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.3); backdrop-filter: blur(4px);
+  z-index: 200; opacity: 0; pointer-events: none;
+  transition: opacity 0.25s;
+}
+.search-overlay.open { opacity: 1; pointer-events: all; }
+
+.search-panel {
+  position: fixed; top: 0; left: 0; right: 0;
+  background: var(--card); z-index: 201;
+  transform: translateY(-100%); transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+.search-panel.open { transform: translateY(0); }
+
+.search-inner {
+  max-width: 640px; margin: 0 auto;
+  padding: 14px 20px; display: flex; align-items: center; gap: 10px;
+}
+.search-input {
+  flex: 1; height: 40px; border: 1.5px solid var(--border);
+  border-radius: 20px; padding: 0 16px; font-size: 14px;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  background: var(--bg); color: var(--text); outline: none;
+  transition: border-color 0.2s;
+}
+.search-input:focus { border-color: var(--accent); }
+.search-input::placeholder { color: var(--text-sub); }
+.search-close {
+  width: 36px; height: 36px; border-radius: 50%;
+  border: none; background: transparent; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s; flex-shrink: 0;
+}
+.search-close:hover { background: var(--accent-soft); }
+.search-close svg { width: 18px; height: 18px; stroke: var(--text-sub); }
+
+.search-results {
+  max-width: 640px; margin: 0 auto;
+  padding: 0 20px 16px; max-height: 60vh; overflow-y: auto;
+}
+.search-results .article-card { margin-bottom: 8px; animation: none; }
+.search-hint { padding: 20px 0; text-align: center; font-size: 13px; color: var(--text-sub); }
+
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: translateY(0); }
@@ -219,6 +265,19 @@ body {
 </style>
 </head>
 <body>
+
+<div class="search-overlay" id="searchOverlay"></div>
+<div class="search-panel" id="searchPanel">
+  <div class="search-inner">
+    <input type="text" class="search-input" id="searchInput" placeholder="記事を検索…">
+    <button class="search-close" id="searchClose">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="search-results" id="searchResults">
+    <div class="search-hint">キーワードを入力すると記事を検索できます</div>
+  </div>
+</div>
 
 <header class="header">
   <div class="header-inner">
@@ -317,8 +376,8 @@ function renderArticles() {
     return;
   }
 
-  const featured = filtered.find(a => a.featured) || filtered[0];
-  const rest = filtered.filter(a => a.id !== featured.id);
+  const featured = filtered[0];
+  const rest = filtered.slice(1);
   const cat = categoryConfig[featured.category];
 
   featuredArea.innerHTML = `
@@ -370,6 +429,65 @@ document.querySelectorAll('.nav-item').forEach(item => {
 });
 
 loadArticles();
+
+// ── Search functionality ──
+const searchOverlay = document.getElementById('searchOverlay');
+const searchPanel = document.getElementById('searchPanel');
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+const searchClose = document.getElementById('searchClose');
+const searchBtn = document.querySelector('.header-search');
+
+function openSearch() {
+  searchOverlay.classList.add('open');
+  searchPanel.classList.add('open');
+  setTimeout(() => searchInput.focus(), 300);
+}
+
+function closeSearch() {
+  searchOverlay.classList.remove('open');
+  searchPanel.classList.remove('open');
+  searchInput.value = '';
+  searchResults.innerHTML = '<div class="search-hint">キーワードを入力すると記事を検索できます</div>';
+}
+
+searchBtn.addEventListener('click', openSearch);
+searchClose.addEventListener('click', closeSearch);
+searchOverlay.addEventListener('click', closeSearch);
+
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.trim().toLowerCase();
+  if (!query) {
+    searchResults.innerHTML = '<div class="search-hint">キーワードを入力すると記事を検索できます</div>';
+    return;
+  }
+  const results = allArticles.filter(a =>
+    a.title.toLowerCase().includes(query) ||
+    (categoryConfig[a.category]?.label || '').includes(query)
+  );
+  if (results.length === 0) {
+    searchResults.innerHTML = '<div class="search-hint">「' + query + '」に一致する記事が見つかりませんでした</div>';
+    return;
+  }
+  searchResults.innerHTML = results.map(a => {
+    const c = categoryConfig[a.category] || { label: a.category, tagClass: '', bg: 'var(--bg)' };
+    return `
+      <a href="${a.id}.html" class="article-card">
+        <div class="article-thumb" style="background:${c.bg}">${a.emoji}</div>
+        <div class="article-content">
+          <h3 class="article-title">${a.title}</h3>
+          <div class="article-bottom">
+            <span class="article-tag ${c.tagClass}">${c.label}</span>
+            <span class="article-date">${a.date}</span>
+          </div>
+        </div>
+      </a>`;
+  }).join('');
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && searchPanel.classList.contains('open')) closeSearch();
+});
 </script>
 
 </body>
