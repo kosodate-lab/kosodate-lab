@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>子育て情報ラボ - 子育てまとめ</title>
-<meta name="description" content="子育て情報ラボ｜子育てに関する話題のニュース、SNSで話題の投稿、育児の悩み・体験談、受験情報をまとめてお届け">
+<meta name="description" content="子育て情報ラボ｜子育てに関する話題のニュース、SNSで話題の投稿、コラム、受験情報をまとめてお届け">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
@@ -146,7 +146,7 @@ body {
 }
 .tag-news { background: var(--accent-soft); color: var(--accent); }
 .tag-sns { background: var(--sky-soft); color: var(--sky); }
-.tag-experience { background: var(--mint-soft); color: var(--mint); }
+.tag-column { background: var(--mint-soft); color: var(--mint); }
 .tag-goods { background: var(--yellow-soft); color: #C9A020; }
 .tag-exam { background: var(--purple-soft); color: var(--purple); }
 
@@ -238,7 +238,7 @@ body {
   <button class="cat-tab active" data-cat="all">すべて</button>
   <button class="cat-tab" data-cat="news">🔥 ニュース</button>
   <button class="cat-tab" data-cat="sns">💬 SNS話題</button>
-  <button class="cat-tab" data-cat="experience">💭 体験談</button>
+  <button class="cat-tab" data-cat="column">📝 コラム</button>
   <button class="cat-tab" data-cat="goods">🎁 グッズ</button>
   <button class="cat-tab" data-cat="exam">📚 受験</button>
 </div>
@@ -281,7 +281,7 @@ body {
 const categoryConfig = {
   news:       { label: 'ニュース', tagClass: 'tag-news',       bg: 'var(--accent-soft)', from: 'var(--accent-soft)', to: 'var(--mint-soft)' },
   sns:        { label: 'SNS話題',  tagClass: 'tag-sns',        bg: 'var(--sky-soft)',    from: 'var(--sky-soft)',    to: 'var(--mint-soft)' },
-  experience: { label: '体験談',   tagClass: 'tag-experience',  bg: 'var(--mint-soft)',   from: 'var(--mint-soft)',   to: 'var(--sky-soft)' },
+  column:     { label: 'コラム',   tagClass: 'tag-column',      bg: 'var(--mint-soft)',   from: 'var(--mint-soft)',   to: 'var(--sky-soft)' },
   goods:      { label: 'グッズ',   tagClass: 'tag-goods',       bg: 'var(--yellow-soft)', from: 'var(--yellow-soft)', to: 'var(--accent-soft)' },
   exam:       { label: '受験',     tagClass: 'tag-exam',        bg: 'var(--purple-soft)', from: 'var(--purple-soft)', to: 'var(--sky-soft)' }
 };
