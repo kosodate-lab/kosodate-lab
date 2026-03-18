@@ -134,5 +134,45 @@
     "emoji": "🎯",
     "date": "2023.12.14",
     "featured": false
+  },
+  {
+    "id": "kdi-english-after",
+    "title": "KDI卒園後の英語教育について",
+    "category": "column",
+    "emoji": "🎓",
+    "date": "2024.02.01",
+    "featured": false
+  },
+  {
+    "id": "ibs-dannen",
+    "title": "IBSを断念して次はどうするのか",
+    "category": "column",
+    "emoji": "📖",
+    "date": "2024.02.01",
+    "featured": false
+  },
+  {
+    "id": "yareba-dekiru",
+    "title": "「やれば出来る」はいずれ「出来ない」に変わるという話",
+    "category": "column",
+    "emoji": "💪",
+    "date": "2024.02.23",
+    "featured": false
+  },
+  {
+    "id": "naraigoto-gekihen",
+    "title": "激変した我が家の習い事事情",
+    "category": "column",
+    "emoji": "🔄",
+    "date": "2024.02.29",
+    "featured": false
+  },
+  {
+    "id": "kdi-3years",
+    "title": "KDIに3年間通った感想",
+    "category": "column",
+    "emoji": "🏫",
+    "date": "2024.03.18",
+    "featured": false
   }
 ]

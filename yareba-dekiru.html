@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>「やれば出来る」はいずれ「出来ない」に変わるという話｜子育て情報ラボ</title>
+<meta name="description" content="KDI最後のイベントを通じて感じた「やる気を出す習慣」の大切さ。スピーチコンテストや忍者リーグファイナルの経験から考える子育て論。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --white: #FAFAFA; --bg: #F5F3EF; --card: #FFFFFF; --text: #2C2C2C; --text-sub: #7A7A7A;
+  --accent: #E8725A; --accent-soft: #FFF0ED; --mint: #5ABBA4; --mint-soft: #EDFAF6;
+  --sky: #5A9DE8; --sky-soft: #EDF4FD; --yellow: #F2C94C; --yellow-soft: #FEF9E7;
+  --purple: #9B72CF; --purple-soft: #F3EEFA; --border: #E8E6E1;
+  --shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+  --shadow-hover: 0 2px 8px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.06);
+  --radius: 16px; --radius-sm: 10px;
+}
+body { font-family: 'Zen Maru Gothic', sans-serif; background: var(--bg); color: var(--text); line-height: 1.85; -webkit-font-smoothing: antialiased; min-height: 100vh; }
+.header { border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(12px); background: rgba(255,255,255,0.92); }
+.header-inner { max-width: 640px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; }
+.logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: var(--text); }
+.logo-icon { width: 36px; height: 36px; background: var(--accent); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: white; font-weight: 700; font-family: 'Zen Maru Gothic', sans-serif; letter-spacing: -0.5px; }
+.logo-text { font-size: 18px; font-weight: 700; letter-spacing: 0.3px; }
+.logo-text span { color: var(--accent); }
+.back-btn { display: flex; align-items: center; gap: 4px; font-size: 13px; color: var(--text-sub); text-decoration: none; padding: 6px 12px; border-radius: 8px; transition: all 0.2s; }
+.back-btn:hover { background: var(--accent-soft); color: var(--accent); }
+.back-btn svg { width: 16px; height: 16px; }
+.article-wrapper { max-width: 640px; margin: 0 auto; padding: 20px 20px 120px; }
+.article-hero { background: var(--card); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); margin-bottom: 20px; animation: fadeUp 0.5s ease both; }
+.hero-img { width: 100%; height: 200px; display: flex; align-items: center; justify-content: center; font-size: 56px; }
+.hero-body { padding: 20px 20px 24px; }
+.hero-cat { display: inline-block; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; margin-bottom: 10px; }
+.tag-column { background: var(--mint-soft); color: var(--mint); }
+.hero-title { font-size: 20px; font-weight: 700; line-height: 1.55; margin-bottom: 14px; }
+.hero-meta { display: flex; align-items: center; gap: 12px; font-size: 12px; color: var(--text-sub); flex-wrap: wrap; }
+.hero-meta .dot { width: 3px; height: 3px; background: var(--border); border-radius: 50%; }
+.article-body { background: var(--card); border-radius: var(--radius); padding: 24px 20px 32px; box-shadow: var(--shadow); margin-bottom: 20px; animation: fadeUp 0.5s ease both; animation-delay: 0.1s; }
+.article-body h2 { font-size: 17px; font-weight: 700; line-height: 1.5; margin: 32px 0 16px; padding: 12px 16px; background: var(--bg); border-radius: var(--radius-sm); border-left: 4px solid var(--mint); }
+.article-body h2:first-child { margin-top: 0; }
+.article-body p { font-size: 15px; margin-bottom: 16px; }
+.article-body strong { color: var(--accent); font-weight: 700; }
+.highlight-box { background: var(--accent-soft); border-radius: var(--radius-sm); padding: 16px 18px; margin: 20px 0; font-size: 14px; line-height: 1.75; }
+.highlight-box.mint { background: var(--mint-soft); }
+.highlight-box.sky { background: var(--sky-soft); }
+.highlight-box.yellow { background: var(--yellow-soft); }
+.highlight-box-title { font-weight: 700; margin-bottom: 6px; font-size: 14px; }
+.article-body ol { margin: 16px 0; padding-left: 24px; font-size: 15px; }
+.article-body ol li { margin-bottom: 8px; }
+.notice-box { background: #f0f0ed; border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 16px 18px; margin: 24px 0; font-size: 13px; color: var(--text-sub); line-height: 1.75; }
+.notice-box-title { font-weight: 700; margin-bottom: 4px; color: var(--text); font-size: 13px; }
+.share-section { background: var(--card); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); margin-bottom: 20px; text-align: center; animation: fadeUp 0.5s ease both; animation-delay: 0.2s; }
+.share-label { font-size: 13px; font-weight: 700; color: var(--text-sub); margin-bottom: 14px; }
+.share-buttons { display: flex; justify-content: center; gap: 10px; }
+.share-btn { width: 48px; height: 48px; border-radius: 50%; border: none; display: flex; align-items: center; justify-content: center; font-size: 18px; cursor: pointer; transition: all 0.2s; text-decoration: none; color: white; }
+.share-btn:hover { transform: scale(1.1); }
+.share-x { background: #000; } .share-line { background: #06C755; }
+.share-hatena { background: #00A4DE; font-size: 14px; font-weight: 900; font-family: 'Outfit', sans-serif; }
+.share-copy { background: var(--text-sub); }
+.related-section { margin-bottom: 20px; animation: fadeUp 0.5s ease both; animation-delay: 0.25s; }
+.related-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+.related-header h2 { font-size: 16px; font-weight: 700; }
+.related-header .line { flex: 1; height: 1px; background: var(--border); }
+.related-card { background: var(--card); border-radius: var(--radius); padding: 16px; display: flex; gap: 14px; box-shadow: var(--shadow); cursor: pointer; transition: all 0.3s ease; margin-bottom: 10px; text-decoration: none; color: var(--text); }
+.related-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-1px); }
+.related-thumb { flex-shrink: 0; width: 80px; height: 80px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 28px; }
+.related-content { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; }
+.related-title { font-size: 13px; font-weight: 700; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.related-meta { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
+.related-tag { padding: 3px 8px; border-radius: 5px; font-size: 10px; font-weight: 700; }
+.tag-news { background: var(--accent-soft); color: var(--accent); }
+.related-date { font-size: 11px; color: var(--text-sub); }
+.bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-top: 1px solid var(--border); z-index: 100; padding-bottom: env(safe-area-inset-bottom); }
+.bottom-nav-inner { max-width: 640px; margin: 0 auto; display: flex; justify-content: space-around; padding: 8px 0 6px; }
+.nav-item { display: flex; flex-direction: column; align-items: center; gap: 2px; text-decoration: none; color: var(--text-sub); font-size: 10px; font-weight: 500; padding: 4px 12px; border-radius: 8px; transition: all 0.2s; cursor: pointer; border: none; background: none; }
+.nav-item.active { color: var(--accent); } .nav-item:hover { color: var(--accent); } .nav-item svg { width: 22px; height: 22px; }
+.scroll-top { position: fixed; bottom: 80px; right: 20px; width: 44px; height: 44px; background: var(--card); border: 1.5px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: var(--shadow); transition: all 0.3s; opacity: 0; pointer-events: none; z-index: 90; }
+.scroll-top.visible { opacity: 1; pointer-events: all; }
+.scroll-top:hover { background: var(--accent); border-color: var(--accent); }
+.scroll-top:hover svg { stroke: white; }
+.scroll-top svg { width: 18px; height: 18px; stroke: var(--text-sub); }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+@media (min-width: 641px) { .hero-img { height: 260px; } .hero-title { font-size: 22px; } .article-body { padding: 32px 28px 40px; } }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">ラボ</div>
+      <div class="logo-text">子育て情報<span>ラボ</span></div>
+    </a>
+    <a href="index.html" class="back-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+      戻る
+    </a>
+  </div>
+</header>
+
+<div class="article-wrapper">
+
+  <div class="article-hero">
+    <div class="hero-img" style="background: linear-gradient(135deg, var(--yellow-soft) 0%, var(--accent-soft) 100%);">💪🔥</div>
+    <div class="hero-body">
+      <span class="hero-cat tag-column">コラム</span>
+      <h1 class="hero-title">「やれば出来る」はいずれ「出来ない」に変わるという話</h1>
+      <div class="hero-meta">
+        <span>📅 2024.02.23</span>
+        <span class="dot"></span>
+        <span>コラム</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-body">
+
+    <h2>KDI最後のイベント──忍者リーグファイナルとスピーチコンテスト</h2>
+
+    <p>皆様こんばんは。</p>
+
+    <p>これまでKDIの年度最後のイベントは音楽会でしたが、今年は忍者リーグファイナルとスピーチコンテストがありました。</p>
+
+    <p>忍者リーグファイナルは今年から始まったわけではなく、コロナによる影響で過去2年間実施されていなかっただけでした。N以外の全学年入り混じりでチームスポーツをする「忍者リーグ」は日常的に園で行われていて、その最終戦「忍者リーグファイナル」は親見学ありで運動会と同じ会場でやりました。（私は仕事の都合で見に行けませんでした）</p>
+
+    <p>最終戦の種目はドッジボールで、長男はボールに一度も触ることなく全部避けて優勝に貢献（？）、長女は勝てなかったものの取って投げて活躍の場があったようで、2人とも楽しかったようです。</p>
+
+    <p>スピーチコンテストはUKを対象に、KDIでの思い出について英語で1分間スピーチした動画を送るという形式でした。参加は任意で、取り組む熱量も各家庭さまざまだったと思いますが、我が家は提出2日前に突如練習が始まり何とかギリギリ提出に間に合ったといった感じでした。</p>
+
+    <p>KDI・やる気スイッチグループ系列の年長全員が対象で参加者は全国で170人くらい、その中でファイナリスト31名が選ばれ、そこから優勝者含め各賞が選出されるようです。長女は特に賞を獲得したわけではありませんでしたが、突貫工事だった割にはファイナリストには残って友達と一緒に写真掲載されて満足した様子でした。</p>
+
+    <h2>「やってもやらなくてもいいこと」を楽しめるか</h2>
+
+    <p>スピーチコンテストの参加は主に本人がそもそも乗り気だったことと妻の意向によるもので、私は正直そこまで参加することに魅力を感じていなかったわけですが、結果的に長女の満足そうな姿を見ると、こういう「やってもやらなくてもいいこと」をいかに楽しめるかは大切だと痛感しました。</p>
+
+    <p>「任意参加」だけでなく、そもそも今後の学校生活において「やる気を出す出さないは任意」の連続であることは間違いないと思います。運動会でもマラソン大会でも、普段の授業やテストにおいても、遠くから冷めた目で見ていることはいくらでもできるわけです。</p>
+
+    <p>自分の得意分野、活躍ができる種目であればそれなりにみんな積極的になるのはわかります。しかし得意不得意に関わらず自分なりの向き合い方で参加して、イベントを楽しもうという姿勢は学校生活の思い出の数だけではなく、<strong>その後の人生においても重要な気がします。</strong></p>
+
+    <h2>「やれば出来る」が「出来ない」に変わるとき</h2>
+
+    <p>ここで唐突な話になりますが、「料理」なんてのは間違いなく誰にでもできます。一昔前は料理が上手or下手という概念があったかもしれませんが、今や料理系YouTuberがしのぎを削りレシピを公開し、プロの料理人ですらレシピ・作り方を解説していて、見たそのままを作ればいい時代です。</p>
+
+    <p>よって料理をしない人は「出来ない」のではなく「やれば出来るけどやらないだけ」なのは間違いないと思います。そして料理をしない人の多くがその通り「自分はやれば出来るけどやらないだけ」と思っているわけです。だから「今日は簡単にうどんでいいよ」みたいなネタが度々炎上するんだと思っています。</p>
+
+    <p>ですがやる気を出さない期間が長くなれば長くなるほど、「やれば出来る」の「やれば」がいつか起こり得なくなり、確かにやれば出来る、でも「やる」ことが絶対にないので結局「出来ない」と一緒になると思います。</p>
+
+    <p>この「やれば出来る」は料理だけではなくあらゆる場面に存在して、<strong>定期的に「やれば出来る」ではなくて「やってみた結果やっぱり出来た」を経験しておかなければ本当に何もできない人、何もしない人が完成する</strong>と思います。</p>
+
+    <p>仕事以外の一切にやる気を出さない男性は家庭内において最初は「何もしない人」だったのがいつか「何もできない人」になる、でもいつまでも「やれば出来る」と思っているので自分がやりもせずできもしないことを簡単に否定するでしょう。</p>
+
+    <h2>子どもの頃から「やる気を出す」習慣を</h2>
+
+    <p>もう大人になってしまえば「やる気を出す」ことにどれほどのエネルギーを要するか誰もが知っているはずです。子どもの頃から行事とは呼べないような小さなイベント事にも積極的に参加して楽しみ、何に対しても「やる気を出す」習慣は、もう後からでは取り返しのつかない価値になり得ると今回のスピーチコンテストに参加する子どもを見て思いました。</p>
+
+    <p>KDIに限らずこういう機会があれば子どもたちに参加を促し、親も参加できるようなことであれば自分も積極的に関わっていこうと考えを改めさせられるKDI最後のイベントでした。</p>
+
+    <div class="notice-box">
+      <div class="notice-box-title">📅 この記事について</div>
+      この記事は子育て情報ラボ管理人が2024年2月に個人的に書いたブログを編集・再掲したものです。
+    </div>
+
+  </div>
+
+  <div class="share-section">
+    <div class="share-label">この記事をシェアする</div>
+    <div class="share-buttons">
+      <a href="#" class="share-btn share-x" title="Xでシェア">𝕏</a>
+      <a href="#" class="share-btn share-line" title="LINEで送る">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 5.82 2 10.5c0 2.83 1.63 5.35 4.18 6.98-.15.54-.54 2.01-.62 2.32-.1.39.14.39.3.28.12-.08 1.94-1.32 2.73-1.86.46.07.93.1 1.41.1 5.52 0 10-3.82 10-8.5S17.52 2 12 2z"/></svg>
+      </a>
+      <a href="#" class="share-btn share-hatena" title="はてブ">B!</a>
+      <button class="share-btn share-copy" title="リンクをコピー" onclick="copyLink()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="related-section">
+    <div class="related-header">
+      <h2>📰 関連記事</h2>
+      <div class="line"></div>
+    </div>
+    <div id="related-articles"></div>
+  </div>
+
+</div>
+
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<nav class="bottom-nav">
+  <div class="bottom-nav-inner">
+    <a href="index.html" class="nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      ホーム
+    </a>
+    <button class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>人気</button>
+    <button class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>カテゴリ</button>
+    <button class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>保存</button>
+  </div>
+</nav>
+
+<script>
+const scrollTopBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', () => { scrollTopBtn.classList.toggle('visible', window.scrollY > 400); });
+function copyLink() { navigator.clipboard.writeText(window.location.href).then(() => { alert('リンクをコピーしました！'); }); }
+const categoryConfig = {
+  news:   { label: 'ニュース', tagClass: 'tag-news',   bg: 'var(--accent-soft)' },
+  sns:    { label: 'SNS話題',  tagClass: 'tag-sns',    bg: 'var(--sky-soft)' },
+  column: { label: 'コラム',   tagClass: 'tag-column',  bg: 'var(--mint-soft)' },
+  goods:  { label: 'グッズ',   tagClass: 'tag-goods',   bg: 'var(--yellow-soft)' },
+  exam:   { label: '受験',     tagClass: 'tag-exam',    bg: 'var(--purple-soft)' }
+};
+async function loadRelated() {
+  try {
+    const res = await fetch('articles.json?' + Date.now());
+    const articles = await res.json();
+    const currentId = location.pathname.split('/').pop().replace('.html','');
+    const current = articles.find(a => a.id === currentId);
+    const others = articles.filter(a => a.id !== currentId);
+    const sameCat = others.filter(a => a.category === (current ? current.category : ''));
+    const diffCat = others.filter(a => a.category !== (current ? current.category : ''));
+    const related = [...sameCat, ...diffCat].slice(0, 3);
+    const container = document.getElementById('related-articles');
+    if (!related.length) { container.innerHTML = ''; return; }
+    container.innerHTML = related.map(a => {
+      const c = categoryConfig[a.category] || { label: a.category, tagClass: '', bg: 'var(--bg)' };
+      return `<a href="${a.id}.html" class="related-card"><div class="related-thumb" style="background:${c.bg}">${a.emoji}</div><div class="related-content"><h3 class="related-title">${a.title}</h3><div class="related-meta"><span class="related-tag ${c.tagClass}">${c.label}</span><span class="related-date">${a.date}</span></div></div></a>`;
+    }).join('');
+  } catch(e) {}
+}
+loadRelated();
+</script>
+
+</body>
+</html>
