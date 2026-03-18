@@ -14,5 +14,13 @@
     "emoji": "🏫",
     "date": "2026.03.18",
     "featured": false
+  },
+  {
+    "id": "kdi-reading",
+    "title": "Kids Duo Internationalにおけるreading力について",
+    "category": "column",
+    "emoji": "📚",
+    "date": "2023.01.18",
+    "featured": false
   }
 ]
