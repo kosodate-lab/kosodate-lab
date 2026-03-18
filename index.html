@@ -308,6 +308,9 @@ function renderArticles() {
     ? allArticles
     : allArticles.filter(a => a.category === currentCategory);
 
+  // Sort by date (newest first)
+  filtered.sort((a, b) => b.date.replace(/\./g, '') - a.date.replace(/\./g, ''));
+
   if (filtered.length === 0) {
     featuredArea.innerHTML = '';
     articleList.innerHTML = '<div class="empty-state">このカテゴリの記事はまだありません。</div>';
