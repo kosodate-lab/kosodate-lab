@@ -1,10 +1,18 @@
 [
   {
+    "id": "jidouteate-2026",
+    "title": "【2026年最新】児童手当まとめ｜所得制限撤廃・第3子月3万円・2万円給付も解説",
+    "category": "news",
+    "emoji": "💰",
+    "date": "2026.03.18",
+    "featured": true
+  },
+  {
     "id": "daremo-tsuen-2026",
     "title": "【2026年4月開始】「こども誰でも通園制度」とは？対象・料金・申請方法をわかりやすく解説",
     "category": "news",
     "emoji": "🏫",
     "date": "2026.03.18",
-    "featured": true
+    "featured": false
   }
 ]
