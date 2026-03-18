@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kids Duo Internationalにおけるreading力について｜子育て情報ラボ</title>
+<meta name="description" content="Kids Duo International(KDI)に通う娘のreading力について。phonicsとsightwordsの効果、英検との向き合い方、夫婦での話し合いの記録。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --white: #FAFAFA; --bg: #F5F3EF; --card: #FFFFFF; --text: #2C2C2C; --text-sub: #7A7A7A;
+  --accent: #E8725A; --accent-soft: #FFF0ED; --mint: #5ABBA4; --mint-soft: #EDFAF6;
+  --sky: #5A9DE8; --sky-soft: #EDF4FD; --yellow: #F2C94C; --yellow-soft: #FEF9E7;
+  --purple: #9B72CF; --purple-soft: #F3EEFA; --border: #E8E6E1;
+  --shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+  --shadow-hover: 0 2px 8px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.06);
+  --radius: 16px; --radius-sm: 10px;
+}
+body { font-family: 'Zen Maru Gothic', sans-serif; background: var(--bg); color: var(--text); line-height: 1.85; -webkit-font-smoothing: antialiased; min-height: 100vh; }
+.header { border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(12px); background: rgba(255,255,255,0.92); }
+.header-inner { max-width: 640px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; }
+.logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: var(--text); }
+.logo-icon { width: 36px; height: 36px; background: var(--accent); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: white; font-weight: 700; font-family: 'Zen Maru Gothic', sans-serif; letter-spacing: -0.5px; }
+.logo-text { font-size: 18px; font-weight: 700; letter-spacing: 0.3px; }
+.logo-text span { color: var(--accent); }
+.back-btn { display: flex; align-items: center; gap: 4px; font-size: 13px; color: var(--text-sub); text-decoration: none; padding: 6px 12px; border-radius: 8px; transition: all 0.2s; }
+.back-btn:hover { background: var(--accent-soft); color: var(--accent); }
+.back-btn svg { width: 16px; height: 16px; }
+.article-wrapper { max-width: 640px; margin: 0 auto; padding: 20px 20px 120px; }
+.article-hero { background: var(--card); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); margin-bottom: 20px; animation: fadeUp 0.5s ease both; }
+.hero-img { width: 100%; height: 200px; display: flex; align-items: center; justify-content: center; font-size: 56px; }
+.hero-body { padding: 20px 20px 24px; }
+.hero-cat { display: inline-block; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; margin-bottom: 10px; }
+.tag-column { background: var(--mint-soft); color: var(--mint); }
+.hero-title { font-size: 20px; font-weight: 700; line-height: 1.55; margin-bottom: 14px; }
+.hero-meta { display: flex; align-items: center; gap: 12px; font-size: 12px; color: var(--text-sub); flex-wrap: wrap; }
+.hero-meta .dot { width: 3px; height: 3px; background: var(--border); border-radius: 50%; }
+.article-body { background: var(--card); border-radius: var(--radius); padding: 24px 20px 32px; box-shadow: var(--shadow); margin-bottom: 20px; animation: fadeUp 0.5s ease both; animation-delay: 0.1s; }
+.article-body h2 { font-size: 17px; font-weight: 700; line-height: 1.5; margin: 32px 0 16px; padding: 12px 16px; background: var(--bg); border-radius: var(--radius-sm); border-left: 4px solid var(--mint); }
+.article-body h2:first-child { margin-top: 0; }
+.article-body p { font-size: 15px; margin-bottom: 16px; }
+.article-body strong { color: var(--accent); font-weight: 700; }
+.highlight-box { background: var(--accent-soft); border-radius: var(--radius-sm); padding: 16px 18px; margin: 20px 0; font-size: 14px; line-height: 1.75; }
+.highlight-box.mint { background: var(--mint-soft); }
+.highlight-box.sky { background: var(--sky-soft); }
+.highlight-box.yellow { background: var(--yellow-soft); }
+.highlight-box-title { font-weight: 700; margin-bottom: 6px; font-size: 14px; }
+.article-body ol { margin: 16px 0; padding-left: 24px; font-size: 15px; }
+.article-body ol li { margin-bottom: 8px; }
+.notice-box { background: #f0f0ed; border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 16px 18px; margin: 24px 0; font-size: 13px; color: var(--text-sub); line-height: 1.75; }
+.notice-box-title { font-weight: 700; margin-bottom: 4px; color: var(--text); font-size: 13px; }
+.share-section { background: var(--card); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); margin-bottom: 20px; text-align: center; animation: fadeUp 0.5s ease both; animation-delay: 0.2s; }
+.share-label { font-size: 13px; font-weight: 700; color: var(--text-sub); margin-bottom: 14px; }
+.share-buttons { display: flex; justify-content: center; gap: 10px; }
+.share-btn { width: 48px; height: 48px; border-radius: 50%; border: none; display: flex; align-items: center; justify-content: center; font-size: 18px; cursor: pointer; transition: all 0.2s; text-decoration: none; color: white; }
+.share-btn:hover { transform: scale(1.1); }
+.share-x { background: #000; } .share-line { background: #06C755; }
+.share-hatena { background: #00A4DE; font-size: 14px; font-weight: 900; font-family: 'Outfit', sans-serif; }
+.share-copy { background: var(--text-sub); }
+.related-section { margin-bottom: 20px; animation: fadeUp 0.5s ease both; animation-delay: 0.25s; }
+.related-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+.related-header h2 { font-size: 16px; font-weight: 700; }
+.related-header .line { flex: 1; height: 1px; background: var(--border); }
+.related-card { background: var(--card); border-radius: var(--radius); padding: 16px; display: flex; gap: 14px; box-shadow: var(--shadow); cursor: pointer; transition: all 0.3s ease; margin-bottom: 10px; text-decoration: none; color: var(--text); }
+.related-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-1px); }
+.related-thumb { flex-shrink: 0; width: 80px; height: 80px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 28px; }
+.related-content { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; }
+.related-title { font-size: 13px; font-weight: 700; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.related-meta { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
+.related-tag { padding: 3px 8px; border-radius: 5px; font-size: 10px; font-weight: 700; }
+.tag-news { background: var(--accent-soft); color: var(--accent); }
+.related-date { font-size: 11px; color: var(--text-sub); }
+.bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-top: 1px solid var(--border); z-index: 100; padding-bottom: env(safe-area-inset-bottom); }
+.bottom-nav-inner { max-width: 640px; margin: 0 auto; display: flex; justify-content: space-around; padding: 8px 0 6px; }
+.nav-item { display: flex; flex-direction: column; align-items: center; gap: 2px; text-decoration: none; color: var(--text-sub); font-size: 10px; font-weight: 500; padding: 4px 12px; border-radius: 8px; transition: all 0.2s; cursor: pointer; border: none; background: none; }
+.nav-item.active { color: var(--accent); } .nav-item:hover { color: var(--accent); } .nav-item svg { width: 22px; height: 22px; }
+.scroll-top { position: fixed; bottom: 80px; right: 20px; width: 44px; height: 44px; background: var(--card); border: 1.5px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: var(--shadow); transition: all 0.3s; opacity: 0; pointer-events: none; z-index: 90; }
+.scroll-top.visible { opacity: 1; pointer-events: all; }
+.scroll-top:hover { background: var(--accent); border-color: var(--accent); }
+.scroll-top:hover svg { stroke: white; }
+.scroll-top svg { width: 18px; height: 18px; stroke: var(--text-sub); }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+@media (min-width: 641px) { .hero-img { height: 260px; } .hero-title { font-size: 22px; } .article-body { padding: 32px 28px 40px; } }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">ラボ</div>
+      <div class="logo-text">子育て情報<span>ラボ</span></div>
+    </a>
+    <a href="index.html" class="back-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+      戻る
+    </a>
+  </div>
+</header>
+
+<div class="article-wrapper">
+
+  <div class="article-hero">
+    <div class="hero-img" style="background: linear-gradient(135deg, var(--mint-soft) 0%, var(--sky-soft) 100%);">📚🔤</div>
+    <div class="hero-body">
+      <span class="hero-cat tag-column">コラム</span>
+      <h1 class="hero-title">Kids Duo Internationalにおけるreading力について</h1>
+      <div class="hero-meta">
+        <span>📅 2023.01.18</span>
+        <span class="dot"></span>
+        <span>コラム</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-body">
+
+    <h2>KDI入園から2年、英語力の成長</h2>
+
+    <p>皆様こんばんは。</p>
+
+    <p>長女がKids Duo Internationalに入園してから、今年の4月で2年になります。</p>
+
+    <p>その成果はどうなのかと言えば、私としては非常に満足しています。聞き取れる英語のレベル、話す内容、その発音など、随所で私との格の違いを日々見せつけてくれており、彼女の英語力の行く末を心配することすら失礼なのではないかと思う程。幼少期から英語に触れる機会を多く持てる園に入れて、本当に良かったと思う限りです。</p>
+
+    <h2>KDIの英語教育はlistening・speaking重視</h2>
+
+    <p>そんな私の所感はさておき、今回はKids Duo Internationalにおけるreadingについてです。</p>
+
+    <p>日本の英語教育がreadingとwriting寄りである一方、Kids Duo Internationalの英語教育はlisteningとspeakingに振れています。これはもちろん、そうであって欲しいと思っていたことで何一つ不満はありません。私は今後、娘の後ろをついて回って海外旅行を楽しむつもりなので、読み書きではなく、聞いて理解して話して伝えて欲しいのです。</p>
+
+    <p>そんな最中、1年目（PK）の後半から英検Jr.受験が始まり、娘を含む多くの子が順調に合格し、2年目（LK）の後半である今、学年の約1/3は英検Jr.GOLDに合格したようです。</p>
+
+    <h2>英検5級受験と「読めない」という衝撃</h2>
+
+    <p>そしてこの2023年1月、英検5級があり、任意ではありますが多くの子が受験を予定しているようです。今回のみ、園が準会場の指定が受けられなかったようで、各自申込による受験になるため、KDIで受けられない話をすると娘はさほど乗り気でありませんでしたが、結局受けることになりました。</p>
+
+    <p>KDIはカリキュラム内で英検Jr.GOLDまでの受験対策を行っていますが、英検5級からは時間外に別途、希望に応じて習い事のような感覚で受けることになります。</p>
+
+    <p>この講習にはエントリーテストがあり、これに受からないと講習そのものを受けることが出来ませんが、このエントリーテストで問われる内容が、日本語の問題文を読めるか否か、であると聞いたため、講習の受講は端から諦めました。</p>
+
+    <p>日本語が読めなくはありませんが、読む速度は遅く、漢字にふりがなが振られた問題文を読むにはあまりに時間がかかります。そして一番の問題は、これまでいろいろなワーク類をやってきましたが、日本語の問題文を読まなければ設問の意図が分からない時、娘が目に見えて萎えている。ただただ読むのが面倒なようです。</p>
+
+    <p>よって試験対策は家で行うことになりました。とりあえず問題集をやってみたわけですが、思いの外、単語が読めませんでした。いやもう、本当にそんなことある!?と言うくらい読めませんでした。日頃話している英語、聞いて意味を理解している英語のレベルと比べ、圧倒的に簡単な単語でも、読むことが出来ません。<strong>私が一番の衝撃を受けたのは"very"を読めないことでした。</strong></p>
+
+    <h2>phonicsで読めない現実</h2>
+
+    <p>Kids Duo Internationalでもphonicsやsightwordsをやっています。ですが、娘はsightwordsで覚えた単語についてはスラスラと読めますが、phonicsに依存する単語が読めません。</p>
+
+    <p>ここで、ありうる可能性は3つ、</p>
+
+    <ol>
+      <li>phonicsでは単語が読めるようにならない。</li>
+      <li>約2年間のKDIでのphonicsでは単語が読めるようにならない。</li>
+      <li>約2年間のKDIでのphonicsで娘は単語が読めるようにならない。</li>
+    </ol>
+
+    <p>1の主張はサンプル数n=1では話にならないため、2か3ということになりますが、いずれにしろ、娘が単語を読めない事実は変わらず、またこの先UKでの1年間を過ごしても読めないままな可能性があります。</p>
+
+    <h2>「読めなくてもいい」という選択肢</h2>
+
+    <p>どうすべきかを考える上でまずややこしいことは、聞けば意味が分かる、ということです。聞いて、話せるので当然ですが発音出来てしまえば、一瞬で意味を理解できます。</p>
+
+    <p>1つの考えとしては、これで良いのではないかという話です。</p>
+
+    <p>聞いて話せる。つまり会話が出来る。それも英語ネイティブの人と。これに何の不満があるでしょうか。いいえ、ありません。よって、今後英検は受けない、もしくは対策をせず結果を気にしない。それを良しとして突き進むのも悪くありません。</p>
+
+    <p>ですが、夫婦で話し合った結果、readingも何とかしようという話になりました。日常生活で目に入った英単語を読めなければ単に"英語が書いてある"としか思わないでしょう。ですが、読めれば発音した上で意味まで分かる。これが今後何百回と繰り返されたとき、単純に読めた方が楽しいと思います。</p>
+
+    <p>また英語の本を読み聞かせをすれば話の内容を分かってくれますが、ゆくゆくは英語の本を自分で読んで欲しい、読書して欲しいという願望も捨てきれません。</p>
+
+    <p>ということで、この分岐については、<strong>readingは捨てない。でも英検の為にやるのではない。</strong>という方向にコマを進めました。</p>
+
+    <h2>phonics vs sightwords ── 夫婦の議論</h2>
+
+    <p>そして次の分岐点は、単語をどのようにして読めるようにするべきか、という話です。</p>
+
+    <p>まず妻の理想は、phonicsを理解して、その結果単語を読めるようになって欲しいということです。自分の意見を述べることも大切ですが、相手の意見を聞くことこそが重要です。そうですよね総理。</p>
+
+    <p>前述の可能性の2.約2年間のKDIでのphonicsでは単語が読めるようにならない。であると考え、KDIでダメならば家でやろうということです。うちの子はやれば出来る！そう言いたくなる気持ちも分かります。</p>
+
+    <p>ですが、現実問題として、それが娘だけなのかはさておき、娘がphonicsで単語を読めない以上、このままphonicsのみで突き進むことは、readingが出来ない状態で進み続けることになる可能性を含んでいます。</p>
+
+    <p>一方、そんな娘はsightwordsで覚えた単語は読める、という状態でもあります。そして英検5級の問題集を解いている最中、分からない単語を随時教えた結果、以前よりだいぶ読めるようになった気がします。</p>
+
+    <p>つまり、外資でステップアップを狙う向上心高き社会人や、受験生と同じように、単語を見て発音を覚える。これの結果は出ていることは事実です。娘に単語をゴリゴリに教え込んで覚えてもらうことが手っ取り早いのは間違いありません。</p>
+
+    <h2>数学に例えるとわかりやすい</h2>
+
+    <p>今現在確認できている事象はphonicsで結果は出ず、sightwordsで結果は出る。ということ。これに飛びついてしまいそうですが、ここで再び妻の考えです。無理に単語を覚えさせるのは英語嫌いになってしまう可能性も込みで気乗りせず、やはりphonicsを身に着けて読めるようになって欲しいということです。</p>
+
+    <p>これを分かりにくく数学を例えにして言い換えると、<strong>公式を覚えるのがsightwords、公式の導出を学ぶのがphonics</strong>という考えで、夫婦の認識は一致しました。</p>
+
+    <p>確かに、物事の本質を理解していれば自ずと導かれるのが公式であり、公式をただ丸暗記して使うだけに比べて圧倒的に理解が深いことは当然です。本質を知っているからこそ応用も可能で、幅広い範囲を理解することが出来る。今回の議題についていえば、phonicsを理解すればそれだけで多くの単語を読むことが出来る。よって何万個もの単語の発音を覚えるよりphonicsを理解する方が重要であり、近道な可能性があります。</p>
+
+    <p>一方のsightwordsで公式を覚えると、すぐに読める文章が増え、結果が出ます。娘にとって単語ゴリゴリの詰め込みが良いとは思えませんが、読める文章が増えることは娘のやる気や楽しさにも繋がる気がします。さらに、数学において公式を使って問題集をがむしゃらに解いているうちに公式の本質に気づくなんてことは稀ですが、英語においては多くの単語を覚えていく過程で、一定の法則、規則性を経験から覚えることで、phonicsでなくても知らない単語を発音出来るようになることもあるでしょう。</p>
+
+    <p>そんなこんなで夫婦の認識が一致すれば、あとは簡単です。公式の導出も、公式を覚えて問題を解くのも、どちらも重要だと言うことは言うまでもありません。この分岐は<strong>毎日単語を少しずつ覚えつつ、phonicsも諦めずにやろう</strong>という方向にコマを進めました。</p>
+
+    <h2>英検を「指標」として使う</h2>
+
+    <p>phonicsについてはDVDやワークを妻が考え用意してくれているので任せるとして、次は目先の単語力向上に向けた単語をどのようにして覚えるか、という分岐です。</p>
+
+    <p>ここでの前提は、単語を覚える目的は英検の為ではない、ということです。そのため、安易に"英検○級向け単語帳を買おう"とはなりません。ですが、話し合った結果、この安易な発想でも良いのではないかという話になりました。</p>
+
+    <p>単語を100個を10日かけて覚えたとします。11日目に何をするのか。多くの人は10日間で覚えた単語を復習すると思います。では11日目に100個の単語を復習した翌日、12日目は何をするのか。次の100個に取り組むか、復習を繰り返すか分かれると思います。</p>
+
+    <p>ですが、どんなに復習を繰り返しても、全て定着するわけではない以上、どこかで妥協する必要があります。しかし、定着の確認を一切せず突き進むことが正しいとも思えません。</p>
+
+    <p>そこで出てくるのが英検です。何個かの単語を、何日間かかけて覚え、何回繰り返し復習した。それは娘のやる気と覚え具合と相談しながら追々考えるとしましょう。ですがそのままではどのくらい覚えることが出来たのか指標が一切ありません。<strong>この指標に英検を使っても良いのではないか</strong>ということです。</p>
+
+    <p>仮に今月、英検5級に娘が受かったとして、英検4級受験までに覚えたい単語が100個あったとした場合、4カ月程度期間が開くので1日1単語ペースで覚えようという話になります。実際は1日複数個覚え、何回か復習をするでしょう。そして英検4級を受け、受かったとした場合、少なくとも"英検4級に受かる程度の単語力は身に付いた"とは言える。</p>
+
+    <p>英検である必要は全くなく、他に適当な試験がある、もしくは何かオリジナルで指標を作ってそれで納得するも良しです。しかし今KDIで英検受験が半ば強制された結果、英検と言うレールの上に乗っています。他のレールに乗り換えるのは自由、でもとりあえず良さそうな指標が無ければ、英検向けの単語帳を使い、ペースは娘の様子を見ながらやる、という方針になりました。</p>
+
+    <h2>夫婦で出した結論</h2>
+
+    <p>まとめるとこうです。</p>
+
+    <div class="highlight-box mint">
+      <div class="highlight-box-title">📝 我が家の方針</div>
+      ・読める方が楽しそうだから単語は覚えよう<br>
+      ・phonicsは継続しつつコツコツと単語を覚えよう<br>
+      ・適当な定着の指標が見つかるまで英検向け単語帳を使おう
+    </div>
+
+    <p>これが正しい選択なのかは分かりません。ですが、私が昔から何より重要視しているのは夫婦互いによく考えて結果を出すということです。更に言えば、途中でなんか違うんじゃないかと思ったら、方向転換によるロス等を恐れず、再び夫婦でよく話し合うことだと思います。</p>
+
+    <h2>最後に ── 夫婦で話し合うことの大切さ</h2>
+
+    <p>90点を選ぶか、未知のX点を選ぶかを迷ったとき、よく話し合わずに一人で短絡的に、90点を選んだ場合、結果的に多くの場合、正解を選んでいるでしょう。しかし、相手がその-10点分に目がいってしまったとき、未知の方が実は100点なのではないかと疑ってしまったとき、仮に正解を選んでいたとしても、夫婦間においてそれが正解ではなくなってしまうものだと私は思います。</p>
+
+    <p>逆にそれを選ぶ理由、リスク、夫婦互いに思っていることを理解し合い、何かあっても互いに話し合って決めたことなのだから後悔しないと決めて選ぶ選択であれば、結果がどうであれ何だっていいでしょう。将来娘に、そうじゃなかったんだよなあと言われても、真剣に考えて選んだことだけは確かなんだ、ごめん！と言えばいいと思います。</p>
+
+    <p>最後まで読んでいただき、ありがとうございました。</p>
+
+    <div class="notice-box">
+      <div class="notice-box-title">📅 この記事について</div>
+      この記事は子育て情報ラボ管理人が2023年1月に個人的に書いたブログを編集・再掲したものです。
+    </div>
+
+  </div>
+
+  <div class="share-section">
+    <div class="share-label">この記事をシェアする</div>
+    <div class="share-buttons">
+      <a href="#" class="share-btn share-x" title="Xでシェア">𝕏</a>
+      <a href="#" class="share-btn share-line" title="LINEで送る">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 5.82 2 10.5c0 2.83 1.63 5.35 4.18 6.98-.15.54-.54 2.01-.62 2.32-.1.39.14.39.3.28.12-.08 1.94-1.32 2.73-1.86.46.07.93.1 1.41.1 5.52 0 10-3.82 10-8.5S17.52 2 12 2z"/></svg>
+      </a>
+      <a href="#" class="share-btn share-hatena" title="はてブ">B!</a>
+      <button class="share-btn share-copy" title="リンクをコピー" onclick="copyLink()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="related-section">
+    <div class="related-header">
+      <h2>📰 関連記事</h2>
+      <div class="line"></div>
+    </div>
+    <div id="related-articles"></div>
+  </div>
+
+</div>
+
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<nav class="bottom-nav">
+  <div class="bottom-nav-inner">
+    <a href="index.html" class="nav-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      ホーム
+    </a>
+    <button class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>人気</button>
+    <button class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>カテゴリ</button>
+    <button class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>保存</button>
+  </div>
+</nav>
+
+<script>
+const scrollTopBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', () => { scrollTopBtn.classList.toggle('visible', window.scrollY > 400); });
+function copyLink() { navigator.clipboard.writeText(window.location.href).then(() => { alert('リンクをコピーしました！'); }); }
+const categoryConfig = {
+  news:   { label: 'ニュース', tagClass: 'tag-news',   bg: 'var(--accent-soft)' },
+  sns:    { label: 'SNS話題',  tagClass: 'tag-sns',    bg: 'var(--sky-soft)' },
+  column: { label: 'コラム',   tagClass: 'tag-column',  bg: 'var(--mint-soft)' },
+  goods:  { label: 'グッズ',   tagClass: 'tag-goods',   bg: 'var(--yellow-soft)' },
+  exam:   { label: '受験',     tagClass: 'tag-exam',    bg: 'var(--purple-soft)' }
+};
+async function loadRelated() {
+  try {
+    const res = await fetch('articles.json?' + Date.now());
+    const articles = await res.json();
+    const currentId = location.pathname.split('/').pop().replace('.html','');
+    const current = articles.find(a => a.id === currentId);
+    const others = articles.filter(a => a.id !== currentId);
+    const sameCat = others.filter(a => a.category === (current ? current.category : ''));
+    const diffCat = others.filter(a => a.category !== (current ? current.category : ''));
+    const related = [...sameCat, ...diffCat].slice(0, 3);
+    const container = document.getElementById('related-articles');
+    if (!related.length) { container.innerHTML = ''; return; }
+    container.innerHTML = related.map(a => {
+      const c = categoryConfig[a.category] || { label: a.category, tagClass: '', bg: 'var(--bg)' };
+      return `<a href="${a.id}.html" class="related-card"><div class="related-thumb" style="background:${c.bg}">${a.emoji}</div><div class="related-content"><h3 class="related-title">${a.title}</h3><div class="related-meta"><span class="related-tag ${c.tagClass}">${c.label}</span><span class="related-date">${a.date}</span></div></div></a>`;
+    }).join('');
+  } catch(e) {}
+}
+loadRelated();
+</script>
+
+</body>
+</html>

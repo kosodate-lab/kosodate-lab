@@ -336,16 +336,7 @@ body { font-family: 'Zen Maru Gothic', sans-serif; background: var(--bg); color:
       <h2>📰 関連記事</h2>
       <div class="line"></div>
     </div>
-    <a href="daremo-tsuen-2026.html" class="related-card">
-      <div class="related-thumb" style="background: var(--mint-soft);">🏫</div>
-      <div class="related-content">
-        <h3 class="related-title">【2026年4月開始】「こども誰でも通園制度」とは？対象・料金・申請方法をわかりやすく解説</h3>
-        <div class="related-meta">
-          <span class="related-tag tag-news">ニュース</span>
-          <span class="related-date">2026.03.18</span>
-        </div>
-      </div>
-    </a>
+    <div id="related-articles"></div>
   </div>
 
 </div>
@@ -373,6 +364,32 @@ function copyLink() { navigator.clipboard.writeText(window.location.href).then((
 document.querySelectorAll('.toc-list a').forEach(link => {
   link.addEventListener('click', (e) => { e.preventDefault(); const t = document.querySelector(link.getAttribute('href')); if (t) { window.scrollTo({ top: t.getBoundingClientRect().top + window.pageYOffset - 70, behavior: 'smooth' }); } });
 });
+const categoryConfig = {
+  news:   { label: 'ニュース', tagClass: 'tag-news',   bg: 'var(--accent-soft)' },
+  sns:    { label: 'SNS話題',  tagClass: 'tag-sns',    bg: 'var(--sky-soft)' },
+  column: { label: 'コラム',   tagClass: 'tag-column',  bg: 'var(--mint-soft)' },
+  goods:  { label: 'グッズ',   tagClass: 'tag-goods',   bg: 'var(--yellow-soft)' },
+  exam:   { label: '受験',     tagClass: 'tag-exam',    bg: 'var(--purple-soft)' }
+};
+async function loadRelated() {
+  try {
+    const res = await fetch('articles.json?' + Date.now());
+    const articles = await res.json();
+    const currentId = location.pathname.split('/').pop().replace('.html','');
+    const current = articles.find(a => a.id === currentId);
+    const others = articles.filter(a => a.id !== currentId);
+    const sameCat = others.filter(a => a.category === (current ? current.category : ''));
+    const diffCat = others.filter(a => a.category !== (current ? current.category : ''));
+    const related = [...sameCat, ...diffCat].slice(0, 3);
+    const container = document.getElementById('related-articles');
+    if (!related.length) { container.innerHTML = ''; return; }
+    container.innerHTML = related.map(a => {
+      const c = categoryConfig[a.category] || { label: a.category, tagClass: '', bg: 'var(--bg)' };
+      return `<a href="${a.id}.html" class="related-card"><div class="related-thumb" style="background:${c.bg}">${a.emoji}</div><div class="related-content"><h3 class="related-title">${a.title}</h3><div class="related-meta"><span class="related-tag ${c.tagClass}">${c.label}</span><span class="related-date">${a.date}</span></div></div></a>`;
+    }).join('');
+  } catch(e) {}
+}
+loadRelated();
 </script>
 
 </body>
