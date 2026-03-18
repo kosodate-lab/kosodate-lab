@@ -30,5 +30,29 @@
     "emoji": "🎒",
     "date": "2023.01.24",
     "featured": false
+  },
+  {
+    "id": "kdi-juken2",
+    "title": "Kids Duo International卒園後の進路と中学受験②",
+    "category": "column",
+    "emoji": "✏️",
+    "date": "2023.01.27",
+    "featured": false
+  },
+  {
+    "id": "kdi-n-class",
+    "title": "Kids Duo Internationalの2歳（Nクラス）入園する意味はあるのか",
+    "category": "column",
+    "emoji": "👶",
+    "date": "2023.01.27",
+    "featured": false
+  },
+  {
+    "id": "education-for-girls",
+    "title": "女の子にこそ教育費をかけるべきという話",
+    "category": "column",
+    "emoji": "👩‍🎓",
+    "date": "2023.02.02",
+    "featured": false
   }
 ]
