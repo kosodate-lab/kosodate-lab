@@ -54,5 +54,29 @@
     "emoji": "👩‍🎓",
     "date": "2023.02.02",
     "featured": false
+  },
+  {
+    "id": "kdi-gakudo",
+    "title": "Kids Duo International卒園後のKids Duo学童について",
+    "category": "column",
+    "emoji": "🏠",
+    "date": "2023.02.13",
+    "featured": false
+  },
+  {
+    "id": "naraigoto-meaning",
+    "title": "習い事に意味はあるのか",
+    "category": "column",
+    "emoji": "🎹",
+    "date": "2023.03.02",
+    "featured": false
+  },
+  {
+    "id": "reading-update",
+    "title": "その後のreading力はどうなったのか",
+    "category": "column",
+    "emoji": "📖",
+    "date": "2023.05.21",
+    "featured": false
   }
 ]
