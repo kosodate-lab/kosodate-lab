@@ -78,5 +78,29 @@
     "emoji": "📖",
     "date": "2023.05.21",
     "featured": false
+  },
+  {
+    "id": "kosodate-5years",
+    "title": "長女が5歳になり子育てに思うこと",
+    "category": "column",
+    "emoji": "👧",
+    "date": "2023.06.08",
+    "featured": false
+  },
+  {
+    "id": "naraigoto-choice",
+    "title": "習い事の取捨選択",
+    "category": "column",
+    "emoji": "🤸‍♀️",
+    "date": "2023.08.23",
+    "featured": false
+  },
+  {
+    "id": "kdi-after-graduation",
+    "title": "Kids Duo International卒園後の身の振りについて",
+    "category": "column",
+    "emoji": "🎓",
+    "date": "2023.08.27",
+    "featured": false
   }
 ]
