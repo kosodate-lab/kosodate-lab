@@ -43,7 +43,6 @@ body {
   min-height: 100vh;
 }
 
-/* ===== HEADER ===== */
 .header {
   background: var(--card);
   border-bottom: 1px solid var(--border);
@@ -86,386 +85,133 @@ body {
   letter-spacing: -0.5px;
 }
 
-.logo-text {
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-}
-
-.logo-text span {
-  color: var(--accent);
-}
+.logo-text { font-size: 18px; font-weight: 700; letter-spacing: 0.3px; }
+.logo-text span { color: var(--accent); }
 
 .header-search {
-  width: 36px;
-  height: 36px;
+  width: 36px; height: 36px;
   border-radius: 50%;
   border: 1.5px solid var(--border);
   background: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.2s;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: all 0.2s;
 }
+.header-search:hover { border-color: var(--accent); background: var(--accent-soft); }
+.header-search svg { width: 16px; height: 16px; stroke: var(--text-sub); }
 
-.header-search:hover {
-  border-color: var(--accent);
-  background: var(--accent-soft);
-}
-
-.header-search svg {
-  width: 16px;
-  height: 16px;
-  stroke: var(--text-sub);
-}
-
-/* ===== CATEGORY TABS ===== */
 .categories {
-  max-width: 640px;
-  margin: 0 auto;
-  padding: 16px 20px 0;
-  display: flex;
-  gap: 8px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  max-width: 640px; margin: 0 auto; padding: 16px 20px 0;
+  display: flex; gap: 8px; overflow-x: auto;
+  -webkit-overflow-scrolling: touch; scrollbar-width: none;
 }
 .categories::-webkit-scrollbar { display: none; }
 
 .cat-tab {
-  flex-shrink: 0;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 500;
-  border: none;
-  cursor: pointer;
-  transition: all 0.25s;
-  background: var(--card);
-  color: var(--text-sub);
-  border: 1.5px solid var(--border);
-  white-space: nowrap;
+  flex-shrink: 0; padding: 8px 16px; border-radius: 20px;
+  font-size: 13px; font-weight: 500; border: none; cursor: pointer;
+  transition: all 0.25s; background: var(--card); color: var(--text-sub);
+  border: 1.5px solid var(--border); white-space: nowrap;
 }
+.cat-tab.active { background: var(--text); color: var(--white); border-color: var(--text); }
+.cat-tab:not(.active):hover { border-color: var(--text-sub); color: var(--text); }
 
-.cat-tab.active {
-  background: var(--text);
-  color: var(--white);
-  border-color: var(--text);
-}
+.main { max-width: 640px; margin: 0 auto; padding: 16px 20px 100px; }
 
-.cat-tab:not(.active):hover {
-  border-color: var(--text-sub);
-  color: var(--text);
-}
-
-/* ===== MAIN CONTENT ===== */
-.main {
-  max-width: 640px;
-  margin: 0 auto;
-  padding: 16px 20px 100px;
-}
-
-/* ===== FEATURED CARD ===== */
 .featured {
-  background: var(--card);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  margin-bottom: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  animation: fadeUp 0.6s ease both;
+  display: block; text-decoration: none; color: inherit;
+  background: var(--card); border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow); margin-bottom: 20px; cursor: pointer;
+  transition: all 0.3s ease; animation: fadeUp 0.6s ease both;
 }
-
-.featured:hover {
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-2px);
-}
+.featured:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
 
 .featured-img {
-  width: 100%;
-  height: 200px;
-  background: linear-gradient(135deg, var(--accent-soft) 0%, var(--mint-soft) 50%, var(--sky-soft) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
+  width: 100%; height: 200px;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
 }
-
 .featured-img::after {
-  content: '';
-  position: absolute;
-  inset: 0;
+  content: ''; position: absolute; inset: 0;
   background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.03));
 }
 
-.featured-emoji {
-  font-size: 64px;
-  animation: float 3s ease-in-out infinite;
-}
+.featured-emoji { font-size: 64px; animation: float 3s ease-in-out infinite; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-
-.featured-body {
-  padding: 20px;
-}
+.featured-body { padding: 20px; }
 
 .featured-tag {
-  display: inline-block;
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 11px;
-  font-weight: 700;
-  margin-bottom: 10px;
+  display: inline-block; padding: 4px 10px; border-radius: 6px;
+  font-size: 11px; font-weight: 700; margin-bottom: 10px;
 }
-
 .tag-news { background: var(--accent-soft); color: var(--accent); }
 .tag-sns { background: var(--sky-soft); color: var(--sky); }
 .tag-experience { background: var(--mint-soft); color: var(--mint); }
 .tag-goods { background: var(--yellow-soft); color: #C9A020; }
 .tag-exam { background: var(--purple-soft); color: var(--purple); }
 
-.featured-title {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.5;
-  margin-bottom: 8px;
-}
+.featured-title { font-size: 18px; font-weight: 700; line-height: 1.5; margin-bottom: 8px; }
 
 .featured-meta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 12px;
-  color: var(--text-sub);
+  display: flex; align-items: center; gap: 12px;
+  font-size: 12px; color: var(--text-sub);
 }
+.featured-meta .dot { width: 3px; height: 3px; background: var(--border); border-radius: 50%; }
 
-.featured-meta .dot {
-  width: 3px;
-  height: 3px;
-  background: var(--border);
-  border-radius: 50%;
-}
-
-/* ===== ARTICLE CARDS ===== */
-.article-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
+.article-list { display: flex; flex-direction: column; gap: 12px; }
 
 .article-card {
-  background: var(--card);
-  border-radius: var(--radius);
-  padding: 16px;
-  display: flex;
-  gap: 14px;
-  box-shadow: var(--shadow);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  animation: fadeUp 0.6s ease both;
+  display: flex; text-decoration: none; color: inherit;
+  background: var(--card); border-radius: var(--radius); padding: 16px;
+  gap: 14px; box-shadow: var(--shadow); cursor: pointer;
+  transition: all 0.3s ease; animation: fadeUp 0.6s ease both;
 }
-
-.article-card:nth-child(1) { animation-delay: 0.05s; }
-.article-card:nth-child(2) { animation-delay: 0.1s; }
-.article-card:nth-child(3) { animation-delay: 0.15s; }
-.article-card:nth-child(4) { animation-delay: 0.2s; }
-.article-card:nth-child(5) { animation-delay: 0.25s; }
-
-.article-card:hover {
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-1px);
-}
+.article-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-1px); }
 
 .article-thumb {
-  flex-shrink: 0;
-  width: 88px;
-  height: 88px;
+  flex-shrink: 0; width: 88px; height: 88px;
   border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 32px;
+  display: flex; align-items: center; justify-content: center; font-size: 32px;
 }
 
-.article-content {
-  flex: 1;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+.article-content { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; }
 
 .article-title {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.55;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  font-size: 14px; font-weight: 700; line-height: 1.55;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
 }
 
-.article-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 6px;
-}
+.article-bottom { display: flex; align-items: center; justify-content: space-between; margin-top: 6px; }
+.article-tag { padding: 3px 8px; border-radius: 5px; font-size: 10px; font-weight: 700; }
+.article-date { font-size: 11px; color: var(--text-sub); }
 
-.article-tag {
-  padding: 3px 8px;
-  border-radius: 5px;
-  font-size: 10px;
-  font-weight: 700;
-}
+.empty-state { text-align: center; padding: 40px 20px; color: var(--text-sub); font-size: 14px; }
 
-.article-date {
-  font-size: 11px;
-  color: var(--text-sub);
-}
-
-/* ===== RANKING SECTION ===== */
-.section-header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 28px 0 14px;
-  animation: fadeUp 0.6s ease both;
-  animation-delay: 0.3s;
-}
-
-.section-header h2 {
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.section-header .line {
-  flex: 1;
-  height: 1px;
-  background: var(--border);
-}
-
-.ranking-card {
-  background: var(--card);
-  border-radius: var(--radius);
-  padding: 14px 16px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  box-shadow: var(--shadow);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-bottom: 8px;
-  animation: fadeUp 0.6s ease both;
-}
-
-.ranking-card:nth-child(1) { animation-delay: 0.35s; }
-.ranking-card:nth-child(2) { animation-delay: 0.4s; }
-.ranking-card:nth-child(3) { animation-delay: 0.45s; }
-
-.ranking-card:hover {
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-1px);
-}
-
-.rank-num {
-  font-family: 'Outfit', sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--border);
-  width: 28px;
-  text-align: center;
-  flex-shrink: 0;
-}
-
-.ranking-card:nth-child(1) .rank-num { color: var(--accent); }
-.ranking-card:nth-child(2) .rank-num { color: var(--sky); }
-.ranking-card:nth-child(3) .rank-num { color: var(--mint); }
-
-.rank-title {
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 1.5;
-  flex: 1;
-}
-
-.rank-views {
-  font-family: 'Outfit', sans-serif;
-  font-size: 12px;
-  color: var(--text-sub);
-  flex-shrink: 0;
-}
-
-/* ===== BOTTOM NAV ===== */
 .bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(12px);
-  border-top: 1px solid var(--border);
-  z-index: 100;
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: rgba(255,255,255,0.95); backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border); z-index: 100;
   padding-bottom: env(safe-area-inset-bottom);
 }
-
 .bottom-nav-inner {
-  max-width: 640px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  padding: 8px 0 6px;
+  max-width: 640px; margin: 0 auto;
+  display: flex; justify-content: space-around; padding: 8px 0 6px;
 }
-
 .nav-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  text-decoration: none;
-  color: var(--text-sub);
-  font-size: 10px;
-  font-weight: 500;
-  padding: 4px 12px;
-  border-radius: 8px;
-  transition: all 0.2s;
-  cursor: pointer;
-  border: none;
-  background: none;
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  text-decoration: none; color: var(--text-sub); font-size: 10px; font-weight: 500;
+  padding: 4px 12px; border-radius: 8px; transition: all 0.2s;
+  cursor: pointer; border: none; background: none;
 }
+.nav-item.active { color: var(--accent); }
+.nav-item:hover { color: var(--accent); }
+.nav-item svg { width: 22px; height: 22px; }
 
-.nav-item.active {
-  color: var(--accent);
-}
-
-.nav-item:hover {
-  color: var(--accent);
-}
-
-.nav-item svg {
-  width: 22px;
-  height: 22px;
-}
-
-/* ===== ANIMATIONS ===== */
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===== RESPONSIVE ===== */
 @media (min-width: 641px) {
   .main { padding: 24px 20px 100px; }
   .featured-img { height: 240px; }
@@ -474,7 +220,6 @@ body {
 </head>
 <body>
 
-<!-- HEADER -->
 <header class="header">
   <div class="header-inner">
     <a href="index.html" class="logo">
@@ -489,124 +234,20 @@ body {
   </div>
 </header>
 
-<!-- CATEGORY TABS -->
 <div class="categories">
-  <button class="cat-tab active">すべて</button>
-  <button class="cat-tab">🔥 ニュース</button>
-  <button class="cat-tab">💬 SNS話題</button>
-  <button class="cat-tab">💭 体験談</button>
-  <button class="cat-tab">🎁 グッズ</button>
-  <button class="cat-tab">📚 受験</button>
+  <button class="cat-tab active" data-cat="all">すべて</button>
+  <button class="cat-tab" data-cat="news">🔥 ニュース</button>
+  <button class="cat-tab" data-cat="sns">💬 SNS話題</button>
+  <button class="cat-tab" data-cat="experience">💭 体験談</button>
+  <button class="cat-tab" data-cat="goods">🎁 グッズ</button>
+  <button class="cat-tab" data-cat="exam">📚 受験</button>
 </div>
 
-<!-- MAIN -->
 <main class="main">
-
-  <!-- FEATURED -->
-  <a href="daremo-tsuen-2026.html" style="text-decoration:none;color:inherit;">
-  <article class="featured">
-    <div class="featured-img" style="background: linear-gradient(135deg, var(--mint-soft) 0%, var(--sky-soft) 100%);">
-      <span class="featured-emoji">🏫✨</span>
-    </div>
-    <div class="featured-body">
-      <span class="featured-tag tag-news">ニュース</span>
-      <h2 class="featured-title">【2026年4月開始】「こども誰でも通園制度」とは？対象・料金・申請方法をわかりやすく解説</h2>
-      <div class="featured-meta">
-        <span>2026.03.18</span>
-        <span class="dot"></span>
-        <span>NEW</span>
-      </div>
-    </div>
-  </article>
-  </a>
-
-  <!-- ARTICLE LIST -->
-  <div class="article-list">
-
-    <article class="article-card">
-      <div class="article-thumb" style="background: var(--sky-soft);">💬</div>
-      <div class="article-content">
-        <h3 class="article-title">「保育園の連絡帳に毎日何書けばいいの？」SNSで共感の嵐</h3>
-        <div class="article-bottom">
-          <span class="article-tag tag-sns">SNS話題</span>
-          <span class="article-date">3時間前</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="article-card">
-      <div class="article-thumb" style="background: var(--mint-soft);">🍼</div>
-      <div class="article-content">
-        <h3 class="article-title">夜泣き対策まとめ｜先輩ママ200人に聞いた「本当に効いた方法」</h3>
-        <div class="article-bottom">
-          <span class="article-tag tag-experience">体験談</span>
-          <span class="article-date">5時間前</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="article-card">
-      <div class="article-thumb" style="background: var(--yellow-soft);">🎒</div>
-      <div class="article-content">
-        <h3 class="article-title">入学準備で買ってよかったもの・いらなかったものランキング</h3>
-        <div class="article-bottom">
-          <span class="article-tag tag-goods">グッズ</span>
-          <span class="article-date">8時間前</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="article-card">
-      <div class="article-thumb" style="background: var(--purple-soft);">📖</div>
-      <div class="article-content">
-        <h3 class="article-title">【中学受験2027】SAPIX・日能研・四谷大塚の合格実績を徹底比較</h3>
-        <div class="article-bottom">
-          <span class="article-tag tag-exam">受験</span>
-          <span class="article-date">12時間前</span>
-        </div>
-      </div>
-    </article>
-
-    <article class="article-card">
-      <div class="article-thumb" style="background: var(--accent-soft);">🏠</div>
-      <div class="article-content">
-        <h3 class="article-title">在宅ワーク×子育ての両立テク｜「罪悪感」との向き合い方</h3>
-        <div class="article-bottom">
-          <span class="article-tag tag-experience">体験談</span>
-          <span class="article-date">1日前</span>
-        </div>
-      </div>
-    </article>
-
-  </div>
-
-  <!-- RANKING -->
-  <div class="section-header">
-    <h2>🏆 今週の人気記事</h2>
-    <div class="line"></div>
-  </div>
-
-  <article class="ranking-card">
-    <span class="rank-num">1</span>
-    <span class="rank-title">小1の壁、実際どうだった？ワーママ100人のリアル体験談</span>
-    <span class="rank-views">32.1k</span>
-  </article>
-
-  <article class="ranking-card">
-    <span class="rank-num">2</span>
-    <span class="rank-title">【話題】パパの育休取得率が過去最高に　現場のリアルな声</span>
-    <span class="rank-views">28.7k</span>
-  </article>
-
-  <article class="ranking-card">
-    <span class="rank-num">3</span>
-    <span class="rank-title">コストコで見つけた神コスパ子供グッズ10選【2026春】</span>
-    <span class="rank-views">24.3k</span>
-  </article>
-
+  <div id="featured-area"></div>
+  <div id="article-list" class="article-list"></div>
 </main>
 
-<!-- BOTTOM NAV -->
 <nav class="bottom-nav">
   <div class="bottom-nav-inner">
     <button class="nav-item active">
@@ -637,21 +278,95 @@ body {
 </nav>
 
 <script>
-// Category tab switching
+const categoryConfig = {
+  news:       { label: 'ニュース', tagClass: 'tag-news',       bg: 'var(--accent-soft)', from: 'var(--accent-soft)', to: 'var(--mint-soft)' },
+  sns:        { label: 'SNS話題',  tagClass: 'tag-sns',        bg: 'var(--sky-soft)',    from: 'var(--sky-soft)',    to: 'var(--mint-soft)' },
+  experience: { label: '体験談',   tagClass: 'tag-experience',  bg: 'var(--mint-soft)',   from: 'var(--mint-soft)',   to: 'var(--sky-soft)' },
+  goods:      { label: 'グッズ',   tagClass: 'tag-goods',       bg: 'var(--yellow-soft)', from: 'var(--yellow-soft)', to: 'var(--accent-soft)' },
+  exam:       { label: '受験',     tagClass: 'tag-exam',        bg: 'var(--purple-soft)', from: 'var(--purple-soft)', to: 'var(--sky-soft)' }
+};
+
+let allArticles = [];
+let currentCategory = 'all';
+
+async function loadArticles() {
+  try {
+    const res = await fetch('articles.json?' + Date.now());
+    allArticles = await res.json();
+    renderArticles();
+  } catch (e) {
+    document.getElementById('featured-area').innerHTML = '';
+    document.getElementById('article-list').innerHTML = '<div class="empty-state">記事を読み込めませんでした。</div>';
+  }
+}
+
+function renderArticles() {
+  const featuredArea = document.getElementById('featured-area');
+  const articleList = document.getElementById('article-list');
+
+  const filtered = currentCategory === 'all'
+    ? allArticles
+    : allArticles.filter(a => a.category === currentCategory);
+
+  if (filtered.length === 0) {
+    featuredArea.innerHTML = '';
+    articleList.innerHTML = '<div class="empty-state">このカテゴリの記事はまだありません。</div>';
+    return;
+  }
+
+  const featured = filtered.find(a => a.featured) || filtered[0];
+  const rest = filtered.filter(a => a.id !== featured.id);
+  const cat = categoryConfig[featured.category];
+
+  featuredArea.innerHTML = `
+    <a href="${featured.id}.html" class="featured">
+      <div class="featured-img" style="background:linear-gradient(135deg,${cat.from} 0%,${cat.to} 100%)">
+        <span class="featured-emoji">${featured.emoji}✨</span>
+      </div>
+      <div class="featured-body">
+        <span class="featured-tag ${cat.tagClass}">${cat.label}</span>
+        <h2 class="featured-title">${featured.title}</h2>
+        <div class="featured-meta">
+          <span>${featured.date}</span>
+          <span class="dot"></span>
+          <span>NEW</span>
+        </div>
+      </div>
+    </a>`;
+
+  articleList.innerHTML = rest.map((a, i) => {
+    const c = categoryConfig[a.category];
+    return `
+      <a href="${a.id}.html" class="article-card" style="animation-delay:${0.05*(i+1)}s">
+        <div class="article-thumb" style="background:${c.bg}">${a.emoji}</div>
+        <div class="article-content">
+          <h3 class="article-title">${a.title}</h3>
+          <div class="article-bottom">
+            <span class="article-tag ${c.tagClass}">${c.label}</span>
+            <span class="article-date">${a.date}</span>
+          </div>
+        </div>
+      </a>`;
+  }).join('');
+}
+
 document.querySelectorAll('.cat-tab').forEach(tab => {
   tab.addEventListener('click', () => {
     document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
     tab.classList.add('active');
+    currentCategory = tab.dataset.cat;
+    renderArticles();
   });
 });
 
-// Bottom nav switching
 document.querySelectorAll('.nav-item').forEach(item => {
   item.addEventListener('click', () => {
     document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
     item.classList.add('active');
   });
 });
+
+loadArticles();
 </script>
 
 </body>
