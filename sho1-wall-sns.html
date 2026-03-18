@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>「小1の壁」がしんどすぎる件｜子育て情報ラボ</title>
+<meta name="description" content="毎年春にSNSで大バズりする「小1の壁」。学童問題、時短勤務の終了、プリント地獄…共働き家庭のリアルな声とデータをまとめました。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --white: #FAFAFA; --bg: #F5F3EF; --card: #FFFFFF; --text: #2C2C2C; --text-sub: #7A7A7A;
+  --accent: #E8725A; --accent-soft: #FFF0ED; --mint: #5ABBA4; --mint-soft: #EDFAF6;
+  --sky: #5A9DE8; --sky-soft: #EDF4FD; --yellow: #F2C94C; --yellow-soft: #FEF9E7;
+  --purple: #9B72CF; --purple-soft: #F3EEFA; --border: #E8E6E1;
+  --shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+  --shadow-hover: 0 2px 8px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.06);
+  --radius: 16px; --radius-sm: 10px;
+}
+body { font-family: 'Zen Maru Gothic', sans-serif; background: var(--bg); color: var(--text); line-height: 1.85; -webkit-font-smoothing: antialiased; min-height: 100vh; }
+.header { border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(12px); background: rgba(255,255,255,0.92); }
+.header-inner { max-width: 640px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; }
+.logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: var(--text); }
+.logo-icon { width: 36px; height: 36px; background: var(--accent); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: white; font-weight: 700; font-family: 'Zen Maru Gothic', sans-serif; letter-spacing: -0.5px; }
+.logo-text { font-size: 18px; font-weight: 700; letter-spacing: 0.3px; } .logo-text span { color: var(--accent); }
+.back-btn { display: flex; align-items: center; gap: 4px; font-size: 13px; color: var(--text-sub); text-decoration: none; padding: 6px 12px; border-radius: 8px; transition: all 0.2s; } .back-btn:hover { background: var(--accent-soft); color: var(--accent); } .back-btn svg { width: 16px; height: 16px; }
+.article-wrapper { max-width: 640px; margin: 0 auto; padding: 20px 20px 120px; }
+.article-hero { background: var(--card); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); margin-bottom: 20px; animation: fadeUp 0.5s ease both; }
+.hero-img { width: 100%; height: 200px; display: flex; align-items: center; justify-content: center; font-size: 56px; }
+.hero-body { padding: 20px 20px 24px; }
+.hero-cat { display: inline-block; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; margin-bottom: 10px; }
+.tag-sns { background: var(--sky-soft); color: var(--sky); }
+.tag-column { background: var(--mint-soft); color: var(--mint); }
+.tag-news { background: var(--accent-soft); color: var(--accent); }
+.hero-title { font-size: 20px; font-weight: 700; line-height: 1.55; margin-bottom: 14px; }
+.hero-meta { display: flex; align-items: center; gap: 12px; font-size: 12px; color: var(--text-sub); flex-wrap: wrap; }
+.hero-meta .dot { width: 3px; height: 3px; background: var(--border); border-radius: 50%; }
+.trend-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; animation: fadeUp 0.5s ease both; animation-delay: 0.05s; }
+.trend-tag { display: inline-flex; align-items: center; gap: 4px; padding: 6px 12px; background: var(--card); border: 1.5px solid var(--border); border-radius: 20px; font-size: 12px; font-weight: 500; color: var(--text-sub); box-shadow: var(--shadow); }
+.trend-tag .tag-icon { font-size: 13px; }
+.article-body { background: var(--card); border-radius: var(--radius); padding: 24px 20px 32px; box-shadow: var(--shadow); margin-bottom: 20px; animation: fadeUp 0.5s ease both; animation-delay: 0.1s; }
+.article-body h2 { font-size: 17px; font-weight: 700; line-height: 1.5; margin: 32px 0 16px; padding: 12px 16px; background: var(--bg); border-radius: var(--radius-sm); border-left: 4px solid var(--sky); }
+.article-body h2:first-child { margin-top: 0; }
+.article-body p { font-size: 15px; margin-bottom: 16px; }
+.article-body strong { color: var(--accent); font-weight: 700; }
+.highlight-box { background: var(--accent-soft); border-radius: var(--radius-sm); padding: 16px 18px; margin: 20px 0; font-size: 14px; line-height: 1.75; }
+.highlight-box.mint { background: var(--mint-soft); } .highlight-box.sky { background: var(--sky-soft); } .highlight-box.yellow { background: var(--yellow-soft); }
+.highlight-box-title { font-weight: 700; margin-bottom: 6px; font-size: 14px; }
+.point-card { background: linear-gradient(135deg, var(--sky-soft) 0%, var(--mint-soft) 100%); border-radius: var(--radius); padding: 20px; margin: 24px 0; }
+.point-card-title { font-size: 15px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+.point-card ol { padding-left: 20px; font-size: 14px; line-height: 1.85; }
+.point-card ol li { margin-bottom: 6px; }
+
+/* ── X風カード ── */
+.x-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; margin: 18px 0; transition: box-shadow 0.2s; }
+.x-card:hover { box-shadow: var(--shadow-hover); }
+.x-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.x-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; flex-shrink: 0; background: var(--bg); }
+.x-user { flex: 1; }
+.x-name { font-size: 14px; font-weight: 700; line-height: 1.3; }
+.x-handle { font-size: 12px; color: var(--text-sub); }
+.x-logo { width: 18px; height: 18px; flex-shrink: 0; opacity: 0.4; }
+.x-text { font-size: 14.5px; line-height: 1.75; margin-bottom: 12px; }
+.x-footer { display: flex; align-items: center; gap: 16px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 12px; color: var(--text-sub); }
+.x-footer span { display: flex; align-items: center; gap: 4px; }
+.x-date { margin-left: auto; }
+
+.reaction-bar { margin: 20px 0; }
+.reaction-bar-title { font-size: 13px; font-weight: 700; margin-bottom: 10px; color: var(--text-sub); }
+.reaction-bar-track { display: flex; height: 32px; border-radius: 16px; overflow: hidden; box-shadow: inset 0 1px 3px rgba(0,0,0,0.06); }
+.reaction-segment { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: white; }
+.reaction-labels { display: flex; justify-content: space-between; margin-top: 8px; font-size: 12px; color: var(--text-sub); }
+.reaction-labels span { display: flex; align-items: center; gap: 4px; }
+.reaction-labels .dot-legend { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+
+.voice-card { background: var(--card); border: 1.5px solid #d4c4f0; border-radius: var(--radius); padding: 16px 18px; margin: 16px 0; position: relative; }
+.voice-card::before { content: ''; position: absolute; top: -8px; left: 24px; width: 14px; height: 14px; background: var(--card); border-top: 1.5px solid #d4c4f0; border-left: 1.5px solid #d4c4f0; transform: rotate(45deg); }
+.voice-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.voice-avatar { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; background: var(--purple-soft); }
+.voice-name { font-size: 13px; font-weight: 700; }
+.voice-label { font-size: 11px; color: var(--text-sub); }
+.voice-text { font-size: 14px; line-height: 1.75; }
+
+.notice-box { background: #f0f0ed; border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 16px 18px; margin: 24px 0; font-size: 13px; color: var(--text-sub); line-height: 1.75; }
+.notice-box-title { font-weight: 700; margin-bottom: 4px; color: var(--text); font-size: 13px; }
+.share-section { background: var(--card); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); margin-bottom: 20px; text-align: center; animation: fadeUp 0.5s ease both; animation-delay: 0.2s; }
+.share-label { font-size: 13px; font-weight: 700; color: var(--text-sub); margin-bottom: 14px; }
+.share-buttons { display: flex; justify-content: center; gap: 10px; }
+.share-btn { width: 48px; height: 48px; border-radius: 50%; border: none; display: flex; align-items: center; justify-content: center; font-size: 18px; cursor: pointer; transition: all 0.2s; text-decoration: none; color: white; }
+.share-btn:hover { transform: scale(1.1); }
+.share-x { background: #000; } .share-line { background: #06C755; }
+.share-hatena { background: #00A4DE; font-size: 14px; font-weight: 900; font-family: 'Outfit', sans-serif; }
+.share-copy { background: var(--text-sub); }
+.related-section { margin-bottom: 20px; animation: fadeUp 0.5s ease both; animation-delay: 0.25s; }
+.related-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+.related-header h2 { font-size: 16px; font-weight: 700; }
+.related-header .line { flex: 1; height: 1px; background: var(--border); }
+.related-card { background: var(--card); border-radius: var(--radius); padding: 16px; display: flex; gap: 14px; box-shadow: var(--shadow); cursor: pointer; transition: all 0.3s ease; margin-bottom: 10px; text-decoration: none; color: var(--text); }
+.related-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-1px); }
+.related-thumb { flex-shrink: 0; width: 80px; height: 80px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 28px; }
+.related-content { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; }
+.related-title { font-size: 13px; font-weight: 700; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.related-meta { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
+.related-tag { padding: 3px 8px; border-radius: 5px; font-size: 10px; font-weight: 700; }
+.related-date { font-size: 11px; color: var(--text-sub); }
+.bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-top: 1px solid var(--border); z-index: 100; padding-bottom: env(safe-area-inset-bottom); }
+.bottom-nav-inner { max-width: 640px; margin: 0 auto; display: flex; justify-content: space-around; padding: 8px 0 6px; }
+.nav-item { display: flex; flex-direction: column; align-items: center; gap: 2px; text-decoration: none; color: var(--text-sub); font-size: 10px; font-weight: 500; padding: 4px 12px; border-radius: 8px; transition: all 0.2s; cursor: pointer; border: none; background: none; }
+.nav-item.active { color: var(--accent); } .nav-item:hover { color: var(--accent); } .nav-item svg { width: 22px; height: 22px; }
+.scroll-top { position: fixed; bottom: 80px; right: 20px; width: 44px; height: 44px; background: var(--card); border: 1.5px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: var(--shadow); transition: all 0.3s; opacity: 0; pointer-events: none; z-index: 90; }
+.scroll-top.visible { opacity: 1; pointer-events: all; }
+.scroll-top:hover { background: var(--accent); border-color: var(--accent); } .scroll-top:hover svg { stroke: white; }
+.scroll-top svg { width: 18px; height: 18px; stroke: var(--text-sub); }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+@media (min-width: 641px) { .hero-img { height: 260px; } .hero-title { font-size: 22px; } .article-body { padding: 32px 28px 40px; } }
+</style>
+</head>
+<body>
+
+<header class="header"><div class="header-inner"><a href="index.html" class="logo"><div class="logo-icon">ラボ</div><div class="logo-text">子育て情報<span>ラボ</span></div></a><a href="index.html" class="back-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>戻る</a></div></header>
+
+<div class="article-wrapper">
+
+  <div class="article-hero">
+    <div class="hero-img" style="background: linear-gradient(135deg, var(--sky-soft) 0%, var(--accent-soft) 100%);">🧱😭</div>
+    <div class="hero-body">
+      <span class="hero-cat tag-sns">SNS話題</span>
+      <h1 class="hero-title">「小1の壁」がしんどすぎる件</h1>
+      <div class="hero-meta">
+        <span>📅 2026.03.18</span>
+        <span class="dot"></span>
+        <span>SNS話題</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="trend-tags">
+    <span class="trend-tag"><span class="tag-icon">#</span>小1の壁</span>
+    <span class="trend-tag"><span class="tag-icon">#</span>学童問題</span>
+    <span class="trend-tag"><span class="tag-icon">#</span>共働き</span>
+    <span class="trend-tag"><span class="tag-icon">#</span>ワーママ</span>
+    <span class="trend-tag"><span class="tag-icon">🔥</span>毎年春に急上昇</span>
+  </div>
+
+  <div class="article-body">
+
+    <h2>毎年3～4月、SNSが「小1の壁」で埋まる</h2>
+
+    <p>子どもの小学校入学が近づく春、Xのタイムラインには「小1の壁」というワードが溢れ返ります。保育園時代にはなんとか回っていた仕事と子育ての両立が、入学を境に一気に崩壊する──そんな悲鳴にも似た声が毎年この時期に大量に投稿され、多くの共感を集めています。</p>
+
+    <div class="point-card">
+      <div class="point-card-title">📌 「小1の壁」ここがしんどい</div>
+      <ol>
+        <li>学童の預かり時間が保育園より短い＆入れない問題</li>
+        <li>時短勤務が「小学校入学前まで」で終了する会社が多い</li>
+        <li>入学直後の短縮授業・学級閉鎖・長期休みへの対応</li>
+        <li>宿題チェック、持ち物準備、意味不明プリントの嵐</li>
+      </ol>
+    </div>
+
+    <h2>Xではこんな声が上がっている</h2>
+
+    <p>実際にSNSで投稿されている声の趣旨を紹介します。臨場感を大切にしつつ、個人が特定されない形でまとめています。</p>
+
+    <!-- X風カード1 -->
+    <div class="x-card">
+      <div class="x-header">
+        <img class="x-avatar" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiEJQo8biGAXfE-gIxTJMJLuWHbfbMzdt3DBJXRAECO9lpaJr3sPK3qN0biCqEqz1PjYyPaBa9VIfnc6yf6E5BZoC_TrPjGYwH11Hbf0RTjq5z4M30V_KIeK2Kc09g2PVcDgbNfnO4Z2pDy/s400/pose_atama_kakaeru_woman.png" alt="">
+        <div class="x-user">
+          <div class="x-name">時短終了ママ</div>
+          <div class="x-handle">@workingmom_xxx</div>
+        </div>
+        <svg class="x-logo" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </div>
+      <div class="x-text">保育園では19時まで預かってもらえたのに、学童は18時まで。しかも会社の時短勤務は「未就学児まで」で3月末に終了。4月から詰んでるんですけど、誰かこの制度設計した人に話聞きたい。</div>
+    </div>
+
+    <!-- X風カード2 -->
+    <div class="x-card">
+      <div class="x-header">
+        <img class="x-avatar" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhD6jbpMIxixfy4eStS7Bll32TU8VPygWxXdP0PmAZasvliq-SYwX3GWCJJ0h2RPKYuQBwYV0MvJXL-5Gez6PNojf7YvzJDYIzwF5NE0NbLtJpcxV44mxYGgOuF4bkVLRfkuT-0r-dPg6GJ/s400/ojisan1_surprise.png" alt="">
+        <div class="x-user">
+          <div class="x-name">新小1パパ</div>
+          <div class="x-handle">@dad_of_firstgrader</div>
+        </div>
+        <svg class="x-logo" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </div>
+      <div class="x-text">入学初日に持って帰ってきたプリント13枚。しかも微妙にフォーマットが違う。提出期限が3日後のもある。「保護者の皆様へ」って書いてあるけどこれ暗号解読では？</div>
+    </div>
+
+    <!-- X風カード3 -->
+    <div class="x-card">
+      <div class="x-header">
+        <img class="x-avatar" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFEbMz8J9e6naxI8HTkz_R7CcPMNnp8aOusnCK7LKRM1Y7cIabR5B4K9syDXcmLUfbFy1G3WcDEFjMbCqGz2VJQyH6Q8rHfK8sO18b0xm8lZTn3HRjrVLiLEPJFMaqFq0HaVK2r3opWy_w/s400/pose_lose_ستان_woman.png" alt="">
+        <div class="x-user">
+          <div class="x-name">退職したワーママ</div>
+          <div class="x-handle">@ex_fulltime_mom</div>
+        </div>
+        <svg class="x-logo" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </div>
+      <div class="x-text">結局、正社員辞めました。子どもが「学童行きたくない」って毎朝泣くのに「仕事だから」って送り出し続ける自分がどうしても嫌で。キャリアか子どもか、なんで選ばないといけないんだろう。</div>
+    </div>
+
+    <!-- X風カード4 -->
+    <div class="x-card">
+      <div class="x-header">
+        <img class="x-avatar" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirQjwLceAmJJPIbCNufMGPZ4MYpxRVja7Cj7gHBKgqEW_lqMYuYYT94BLXKk3zW7PqVmjdsJWEcoxSjxvNITvb7bLuVA4rL47Y2YZUlqDgSCzWWAeacB8R4WxXCU3UBHW0F3nY7bfL8hg/s800/family_danran.png" alt="">
+        <div class="x-user">
+          <div class="x-name">乗り越えた先輩ママ</div>
+          <div class="x-handle">@mama_survivor_2024</div>
+        </div>
+        <svg class="x-logo" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </div>
+      <div class="x-text">小1の壁、2年目になるとだいぶ楽になります。子どもも自分で準備できるようになるし、親も「あ、これ去年もあったな」って対処できる。1年目は本当にサバイバルだけど、必ず終わりは来る。</div>
+    </div>
+
+    <!-- X風カード5 -->
+    <div class="x-card">
+      <div class="x-header">
+        <img class="x-avatar" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhD6jbpMIxixfy4eStS7Bll32TU8VPygWxXdP0PmAZasvliq-SYwX3GWCJJ0h2RPKYuQBwYV0MvJXL-5Gez6PNojf7YvzJDYIzwF5NE0NbLtJpcxV44mxYGgOuF4bkVLRfkuT-0r-dPg6GJ/s400/ojisan1_surprise.png" alt="">
+        <div class="x-user">
+          <div class="x-name">学級閉鎖に震えるパパ</div>
+          <div class="x-handle">@papa_telework</div>
+        </div>
+        <svg class="x-logo" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </div>
+      <div class="x-text">インフルで学級閉鎖、月曜の朝に連絡。「明日から3日間お休みです」って、こっちの仕事は3日間休めないんですよ。有休は夏休み用に温存してたのに5月でもう残り3日。</div>
+    </div>
+
+    <!-- X風カード6 -->
+    <div class="x-card">
+      <div class="x-header">
+        <img class="x-avatar" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirQjwLceAmJJPIbCNufMGPZ4MYpxRVja7Cj7gHBKgqEW_lqMYuYYT94BLXKk3zW7PqVmjdsJWEcoxSjxvNITvb7bLuVA4rL47Y2YZUlqDgSCzWWAeacB8R4WxXCU3UBHW0F3nY7bfL8hg/s800/family_danran.png" alt="">
+        <div class="x-user">
+          <div class="x-name">祖父母フル稼働ママ</div>
+          <div class="x-handle">@grandma_is_god</div>
+        </div>
+        <svg class="x-logo" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </div>
+      <div class="x-text">小1の壁を乗り越えられたのは完全に実家の親のおかげ。引っ越しまでして祖父母の近くに来た。頼れる人がいない家庭はどうしてるんだろう…制度でどうにかしないと本当に無理だと思う。</div>
+    </div>
+
+    <h2>データで見る「小1の壁」の実態</h2>
+
+    <p>感情論だけでなく、調査データからもこの問題の深刻さが浮かび上がっています。</p>
+
+    <div class="highlight-box sky">
+      <div class="highlight-box-title">📊 関連データ</div>
+      ・小学校入学を機に<strong>働き方の見直しを検討した保護者は50.7％</strong>（放課後NPOアフタースクール調査・2023年）<br>
+      ・うち12.4％が正社員から別の雇用形態に変更<br>
+      ・<strong>学童の待機児童数は1.8万人超</strong>で過去最多を更新（こども家庭庁・2024年5月発表）<br>
+      ・約72％の事業所で小学校入学以降は時短勤務不可（厚労省・令和4年度調査）
+    </div>
+
+    <p>講談社コクリコの2025年調査では、小1の壁を感じたママの<strong>72.5％が実際に働き方を変えた</strong>と回答しており、「壁」が単なる気持ちの問題ではなく、キャリアに直結する構造的な課題であることがわかります。</p>
+
+    <h2>「壁」の正体は1つじゃない</h2>
+
+    <p>SNSの声を見ていると、「小1の壁」と一口に言っても中身はさまざまです。大きく分けると「親視点の壁」と「子ども視点の壁」の2つがあります。</p>
+
+    <div class="highlight-box yellow">
+      <div class="highlight-box-title">👨‍👩‍👦 親視点の壁</div>
+      ・学童の預かり時間が短い（18時 vs 保育園の19時）<br>
+      ・時短勤務制度の終了<br>
+      ・夏休み等の長期休暇対応<br>
+      ・PTA、授業参観、懇談会が平日<br>
+      ・大量のプリント・持ち物管理
+    </div>
+
+    <div class="highlight-box mint">
+      <div class="highlight-box-title">🎒 子ども視点の壁</div>
+      ・新しい環境への適応ストレス<br>
+      ・「授業中じっと座る」という未知の体験<br>
+      ・学童が合わない、行きたくない<br>
+      ・疲れがたまりやすい（特に4～5月）<br>
+      ・友達関係のリセット
+    </div>
+
+    <div class="voice-card">
+      <div class="voice-header">
+        <div class="voice-avatar">✏️</div>
+        <div>
+          <div class="voice-name">管理人の一言</div>
+          <div class="voice-label">子育て情報ラボ</div>
+        </div>
+      </div>
+      <div class="voice-text">国や自治体の施策では解決が難しく、各家庭の総力を挙げて乗り切るしかないですね…</div>
+    </div>
+
+  </div>
+
+  <div class="share-section"><div class="share-label">この記事をシェアする</div><div class="share-buttons"><a href="#" class="share-btn share-x" title="Xでシェア">𝕏</a><a href="#" class="share-btn share-line" title="LINEで送る"><svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 5.82 2 10.5c0 2.83 1.63 5.35 4.18 6.98-.15.54-.54 2.01-.62 2.32-.1.39.14.39.3.28.12-.08 1.94-1.32 2.73-1.86.46.07.93.1 1.41.1 5.52 0 10-3.82 10-8.5S17.52 2 12 2z"/></svg></a><a href="#" class="share-btn share-hatena" title="はてブ">B!</a><button class="share-btn share-copy" title="リンクをコピー" onclick="copyLink()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg></button></div></div>
+
+  <div class="related-section"><div class="related-header"><h2>📰 関連記事</h2><div class="line"></div></div><div id="related-articles"></div></div>
+
+</div>
+
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg></button>
+<nav class="bottom-nav"><div class="bottom-nav-inner"><a href="index.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>ホーム</a><button class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>人気</button><button class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>カテゴリ</button><button class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>保存</button></div></nav>
+
+<script>
+const scrollTopBtn=document.getElementById('scrollTop');window.addEventListener('scroll',()=>{scrollTopBtn.classList.toggle('visible',window.scrollY>400)});function copyLink(){navigator.clipboard.writeText(window.location.href).then(()=>{alert('リンクをコピーしました！')})}
+const categoryConfig={news:{label:'ニュース',tagClass:'tag-news',bg:'var(--accent-soft)'},sns:{label:'SNS話題',tagClass:'tag-sns',bg:'var(--sky-soft)'},column:{label:'コラム',tagClass:'tag-column',bg:'var(--mint-soft)'},goods:{label:'グッズ',tagClass:'tag-goods',bg:'var(--yellow-soft)'},exam:{label:'受験',tagClass:'tag-exam',bg:'var(--purple-soft)'}};
+async function loadRelated(){try{const res=await fetch('articles.json?'+Date.now());const articles=await res.json();const currentId=location.pathname.split('/').pop().replace('.html','');const current=articles.find(a=>a.id===currentId);const others=articles.filter(a=>a.id!==currentId);const sameCat=others.filter(a=>a.category===(current?current.category:''));const diffCat=others.filter(a=>a.category!==(current?current.category:''));const related=[...sameCat,...diffCat].slice(0,3);const container=document.getElementById('related-articles');if(!related.length){container.innerHTML='';return}container.innerHTML=related.map(a=>{const c=categoryConfig[a.category]||{label:a.category,tagClass:'',bg:'var(--bg)'};return`<a href="${a.id}.html" class="related-card"><div class="related-thumb" style="background:${c.bg}">${a.emoji}</div><div class="related-content"><h3 class="related-title">${a.title}</h3><div class="related-meta"><span class="related-tag ${c.tagClass}">${c.label}</span><span class="related-date">${a.date}</span></div></div></a>`}).join('')}catch(e){}}loadRelated();
+</script>
+</body>
+</html>
